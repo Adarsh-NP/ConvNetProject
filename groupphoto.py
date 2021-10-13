@@ -2,9 +2,9 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-src_path = r"C:\\Users\\asus\\Desktop\\CNNProject\\Resources\\Weeks56\\haarcascade_frontalface_alt2.xml"
+src_path = {location of cascade .xml file}
 cascade_classifier = cv2.CascadeClassifier(src_path)
-photo = r"C:\\Users\\asus\\Desktop\\CNNProject\\Resources\\Weeks56\\groupphoto.jpg"
+photo = {location of the photo you want to work on}
 image = cv2.imread(photo)
 
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
