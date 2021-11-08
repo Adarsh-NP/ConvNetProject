@@ -27,12 +27,12 @@ def getImageofInterest(image, regionofInterest):
 def getDetectedLane(image):
     (height, width) = (image.shape[0], image.shape[1])
 
-    #turn the image in gray scale
+    #turn the capture in gray scale
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     #edge det kernel
     canny_image = cv2.Canny(gray_image, 100, 120)
-    regionOfInterest = [(0, height), (width/2, height*0.65), (width, height)]
+    regionOfInterest = [(0, height), (width/2, height*0.6), (width, height)]
     croppedImage = getImageofInterest(canny_image, np.array([regionOfInterest], np.int32))
 
     lines = cv2.HoughLinesP(croppedImage, rho=2, theta=np.pi/180, threshold=50, lines=np.array([]), minLineLength=40, maxLineGap=100 )

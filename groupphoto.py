@@ -15,7 +15,7 @@ detected_face = cascade_classifier.detectMultiScale(gray_image, scaleFactor=1.1,
 print(detected_face)
 
 for (x, y, width, height) in detected_face:
-    cv2.rectangle(image, (x, y), (x + width, y + height), (0, 255, 0), 5)
+    cv2.rectangle(image, (x, y), (x + width, y + height), (0, 255, 0), 3)
 
 plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 plt.show()
